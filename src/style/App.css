@@ -1,0 +1,211 @@
+/* .App {
+  text-align: center;
+} */
+
+.App-header {
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 78px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center;
+  justify-content: center;
+  position: relative; */
+  /* z-index: 0; */
+  /* font-size: calc(10px + 2vmin); */
+  /* color: white; */
+  padding-left: 40px;
+  padding-right: 40px;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.h-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 78px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.h-logo {
+  margin-right: 20px;
+}
+
+.h-headline {
+  min-width: 200px;
+  width: 100%;
+  font-family: 'PlayfairDisplay-EB';
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.h-moreinfo {
+  min-width: 80px;
+  font-family: 'NotoSans-EL';
+  font-size: 16px;
+}
+
+.h-aboutus {
+  min-width: 80px;
+  margin-left: 20px;
+  font-family: 'NotoSans-EL';
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #000000;
+}
+
+.App-body {
+  background-color: #F5F5F5;
+  height: calc(100% - 78px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* z-index: -1; */
+}
+
+.b-title {
+  font-family: 'PlayfairDisplay-EBI';
+  font-size: 100px;
+  letter-spacing: 0.05em;
+  color: #2856A0;
+  margin-bottom: 10px;
+}
+
+.b-subtitle {
+  font-family: 'PlayfairDisplay-EBI';
+  font-size: 18px;
+  text-align: center;
+  color: #2856A0;
+}
+
+.b-createPDF {
+  box-sizing: border-box;
+  width: 180px;
+  height: 38px;
+  background: #2856A0;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.b-inner-createPDF {
+  font-family: 'NotoSans-EBI';
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+
+.b-outer-two-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-selecttype {
+  width: 450px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'NotoSans-EL';
+  font-size: 16px;
+}
+
+.b-outer-uploadpdf {
+  height: 100%;
+  margin-left: 20px;
+}
+
+.b-uploadpdf {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  width: 150px;
+  height: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'NotoSans-EL';
+  font-size: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-dragdrop {
+  margin-top: 20px;
+}
+
+.dropzone {
+  text-align: center;
+  padding: 30px;
+  border: 3px dashed #eeeeee;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.selected-file-wrapper {
+  text-align: center;
+}
+
+.selected-file {
+  color: #000;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-EB";
+  src: url("../font/PlayfairDisplay-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-EBI";
+  src: url("../font/PlayfairDisplay-ExtraBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "NotoSans-EL";
+  src: url("../font/NotoSans-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "NotoSans-EBI";
+  src: url("../font/NotoSans-ExtraBoldItalic.ttf");
+}
+
+/* .App-link {
+  color: #61dafb;
+} */
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+} */
