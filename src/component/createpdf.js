@@ -1,6 +1,6 @@
 import SendIcon from '@mui/icons-material/Send'
 import { Box, Button, CircularProgress } from '@mui/material'
-import React, { Component } from 'react';
+import React, { Component, useHistory } from 'react';
 import Axios from 'axios'
 import BlackButton from '../util/blackbutton';
 
@@ -20,31 +20,28 @@ class CreatePDF extends Component {
                             alert('Choose the Select Summary Type')
                         } else {
                             this.props.serialNumber.current = Math.floor(100000000 + Math.random() * 900000000)
-                            this.props.setLoading(load => !load);
+                            this.props.setLoading(load => (load || true));
 
-                            // const dataTransfer = new DataTransfer()
-                            // this.props.dataTransferList.forEach(file => {
-                            //     dataTransfer.items.add((file.file ?? { name: null }))
-                            // })
-                            // Axios.postForm('http://localhost:3000/', {
-                            //     'filecount': dataTransfer.files.length,
-                            //     'files[]': dataTransfer.files,
-                            //     'id': this.props.serialNumber.current,
-                            //     'selecttype': this.props.serialNumber
-                            // }).then(
-                            //     (response) => {
-                            //         this.setState(state => {
-                            //             return { ...state, loading: false }
-                            //         })
-                            //         history.push("/result")
-                            //     }
-                            // ).catch(
-                            //     () => {
-                            //         this.setState(state => {
-                            //             return { ...state, loading: false }
-                            //         })
-                            //     }
-                            // )
+                            const dataTransfer = new DataTransfer()
+                            this.props.dataTransferList.forEach(item => {
+                                dataTransfer.items.add((item.file))
+                            })
+                            Axios.postForm('http://localhost:3000/', {
+                                'filecount': dataTransfer.files.length,
+                                'files[]': dataTransfer.files,
+                                'id': this.props.serialNumber.current,
+                                'selecttype': this.props.selectType.current
+                            }).then(
+                                (response) => {
+                                    this.props.setLoading(load => (load && false));
+                                    const history = useHistory();
+                                    history.push('/result');
+                                }
+                            ).catch(
+                                () => {
+                                    this.props.setLoading(load => (load && false));
+                                }
+                            )
                         }
                     }
                 }
