@@ -1,0 +1,282 @@
+.App-header {
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 60px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  /* font-size: calc(10px + 2vmin); */
+  /* color: white; */
+  padding-left: 40px;
+  padding-right: 40px;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.h-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.h-logo {
+  margin-right: 20px;
+}
+
+.h-headline {
+  min-width: 200px;
+  width: 100%;
+  /* font-family: 'PlayfairDisplay-EB'; */
+  font-family: 'NotoSans-EB';
+  font-size: 20px;
+}
+
+.h-moreinfo {
+  min-width: 80px;
+  font-family: 'NotoSans-EL';
+  font-size: 16px;
+}
+
+.h-aboutus {
+  min-width: 80px;
+  margin-left: 20px;
+  font-family: 'NotoSans-EL';
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #000000;
+}
+
+.App-loader {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100vw;
+  min-height: calc(100vh - 60px);
+  position: absolute;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-body {
+  position: relative;
+  background-color: #F5F5F5;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* z-index: -1; */
+}
+
+.b-title {
+  /* font-family: 'PlayfairDisplay-EBI'; */
+  /* margin-top: 50px; */
+  font-family: 'NotoSans-EBI';
+  font-size: 60px;
+  /* letter-spacing: 0.05em; */
+  color: #2856A0;
+  margin-bottom: 10px;
+}
+
+.b-subtitle {
+  /* font-family: 'PlayfairDisplay-EBI'; */
+  /* margin-top: 50px; */
+  font-family: 'NotoSans-EBI';
+  font-size: 18px;
+  text-align: center;
+  color: #2856A0;
+}
+
+.b-createPDF {
+  box-sizing: border-box;
+  width: 180px;
+  height: 38px;
+  background: #2856A0;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-createPDF:active {
+  margin-left: 5px;
+  margin-right: -5px;
+  box-shadow: none;
+}
+
+.b-createPDF:hover {
+  background: #1B3A6C;
+}
+
+.b-inner-createPDF {
+  font-family: 'NotoSans-EBI';
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+
+.b-outer-two-buttons {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.b-selecttype {
+  width: 450px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'NotoSans-EL';
+  font-size: 16px;
+}
+
+.b-selecttype:active {
+  height: 100%;
+  margin-left: 5px;
+  margin-right: -5px;
+  box-shadow: none;
+}
+
+/* .b-outer-uploadpdf {
+  height: 100%;
+  margin-left: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.b-outer-uploadpdf:active {
+  margin-left: 25px;
+  margin-right: -5px;
+  box-shadow: none;
+} */
+
+.b-uploadpdf {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  width: 150px;
+  /* height: 100%; */
+  font-family: 'NotoSans-EL';
+  font-size: 16px;
+  border-radius: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-uploadpdf:active {
+  margin-left: 25px;
+  margin-right: -5px;
+  box-shadow: none;
+}
+
+.b-uploadpdf:hover {
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.b-dragdrop {
+  margin-top: 20px;
+}
+
+.b-inner-dragdrop {
+  background-color: #FFFFFF;
+  border: 3px solid rgba(0, 0, 0, 0.25);
+  border-style: dotted;
+  width: 80vw;
+  height: 50vh;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* overflow: auto; */
+  /* overflow: hidden */
+}
+
+.b-inner-dragdrop:hover {
+  border: 3px solid #2856A0;
+  /* background-color: #F5F5F5; */
+}
+
+.b-inner-dragdrop-dragover {
+  border: 3px solid #2856A0;
+  /* background-color: #F5F5F5; */
+}
+
+.b-inner-dragdrop-none {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'NotoSans-ELI';
+  font-size: 14px;
+}
+
+.b-inner-dragdrop-list-header {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+
+  font-family: 'NotoSans-EL';
+  font-size: 14px;
+}
+
+.b-inner-dragdrop-list-element {
+  padding-right: 10px;
+  /* width: 100%; */
+  max-height: calc(50vh - 40px);
+  overflow-y: scroll;
+
+  /* font-family: 'NotoSans-EBI';
+  font-size: 14px; */
+}
+
+.b-inner-dragdrop-list-element-text {
+  font-family: 'NotoSans-EBI';
+  font-size: 14px;
+}
+
+/* @font-face {
+  font-family: "PlayfairDisplay-EB";
+  src: url("../font/PlayfairDisplay-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-EBI";
+  src: url("../font/PlayfairDisplay-ExtraBoldItalic.ttf");
+} */
+
+@font-face {
+  font-family: "NotoSans-EL";
+  src: url("../asset/font/NotoSans-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "NotoSans-ELI";
+  src: url("../asset/font/NotoSans-ExtraLightItalic.ttf");
+}
+
+@font-face {
+  font-family: "NotoSans-EB";
+  src: url("../asset/font/NotoSans-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "NotoSans-EBI";
+  src: url("../asset/font/NotoSans-ExtraBoldItalic.ttf");
+}

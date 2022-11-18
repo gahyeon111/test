@@ -1,24 +1,38 @@
 import React from 'react';
-import upload from '../asset/upload.svg'
+import FileUploadIcon from '@mui/icons-material/FileUpload';
+import { CheckValidity } from '../util/checkvalidity.js';
 
 function UploadPDF(props) {
-    const fileInput = React.useRef(null);
-
-    const handleButtonClick = e => {
-        fileInput.current.click();
+    const handleButtonClick = (e) => {
+        if (Number(props.dataFileCounter.current) >= 5) {
+            alert(`Up to 5 files are available`);
+        } else { props.fileInputRef.current.click(); }
     };
 
-    const handleChange = e => {
-        console.log(e.target.files[0]);
+    const handleChange = (e) => {
+        if ((Number(props.dataFileCounter.current) + Number(e.target.files.length)) > 5) {
+            alert(`Up to 5 files are available`);
+        } else {
+            [...e.target.files].forEach((item, i) => {
+                if (CheckValidity(item, props.dataTransferList)) {
+                    props.setDataTransferList((list) => { return [...list, { file: item }] });
+                    props.dataFileCounter.current++;
+                }
+            })
+        }
+        e.target.value = '';
     };
 
     return (
         <React.Fragment>
             <button className='b-uploadpdf' onClick={handleButtonClick}>
-                Upload PDF <img src={upload} style={{ marginLeft: '10px' }} />
+                Upload PDF <FileUploadIcon sx={{ color: '#2856A0' }} />
             </button>
-            <input type="file"
-                ref={fileInput}
+            <input
+                ref={props.fileInputRef}
+                type="file"
+                accept=".pdf"
+                multiple
                 onChange={handleChange}
                 style={{ display: "none" }} />
         </React.Fragment>

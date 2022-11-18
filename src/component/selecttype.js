@@ -9,10 +9,17 @@ const options = [
     { value: '2', label: '[2 level]' },
 ];
 
-function SelectType() {
+function SelectType(props) {
+    const handleChange = (e) => {
+        props.selectType.current = e.value;
+        console.log(e);
+        console.log(props.selectType);
+    };
+
     return (
         <div>
             <Select
+                onChange={handleChange}
                 defaultValue={options[0]}
                 options={options}
                 theme={(theme) => ({
