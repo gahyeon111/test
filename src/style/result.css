@@ -9,10 +9,10 @@
 }
 
 .result-inner {
-    background-color: #FFFFFF;
-    width: 80vw;
-    min-height: 50vh;
+    width: 1000px;
+    height: 1000px;
     margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .send-result {

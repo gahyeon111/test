@@ -35,7 +35,6 @@
 .h-headline {
   min-width: 200px;
   width: 100%;
-  /* font-family: 'PlayfairDisplay-EB'; */
   font-family: 'NotoSans-EB';
   font-size: 20px;
 }
@@ -250,16 +249,6 @@
   font-family: 'NotoSans-EBI';
   font-size: 14px;
 }
-
-/* @font-face {
-  font-family: "PlayfairDisplay-EB";
-  src: url("../font/PlayfairDisplay-ExtraBold.ttf");
-}
-
-@font-face {
-  font-family: "PlayfairDisplay-EBI";
-  src: url("../font/PlayfairDisplay-ExtraBoldItalic.ttf");
-} */
 
 @font-face {
   font-family: "NotoSans-EL";

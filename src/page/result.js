@@ -4,17 +4,23 @@ import React, { useState, useRef } from 'react';
 import { TextField } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send'
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import PDFviewer from '../component/pdfviewer';
 
 function Result() {
     const email = useRef('');
     const [emailError, setEmailError] = useState("Enter your email to receive");
+    const downloadClick = useRef(null);
+    const pdfLink = useRef('/Bit-to-Bit_meetingMins_Week12.pdf');
+    // const pdfLink = useRef("https://documentservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf");
+    const [downloaded, setDownloaded] = useState(false);
 
-    const handleChange = (e) => {
-        e.preventDefault();
-        email.current = e.target.value;
+    const handleDownloadClick = (e) => {
+        downloadClick.current.click();
+        // 다운로드 했으면 서버에 알려서 파일 지워야 함
+        setDownloaded((prev) => (prev || true));
     }
 
-    const handleButtonClick = (e) => {
+    const handleSendClick = (e) => {
         console.log(email.current)
         const emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
         if (!emailRegex.test(email.current)) {
@@ -22,8 +28,14 @@ function Result() {
             setEmailError(() => 'Invalid E-mail');
         } else {
             setEmailError(() => "Valid E-mail");
-            // send email to server
+            // TODO: send email to server
+            setDownloaded((prev) => (prev || true));
         }
+    }
+
+    const handleChange = (e) => {
+        e.preventDefault();
+        email.current = e.target.value;
     }
 
     return (
@@ -38,8 +50,17 @@ function Result() {
                     <path id="check" className="st2" d="M31.3 64.3c-1.2-1.5-3.4-1.9-4.9-.7-1.5 1.2-1.9 3.4-.7 4.9l7.8 10.4c1.3 1.7 3.8 1.9 5.3.4L71.1 47c1.4-1.4 1.4-3.6 0-5s-3.6-1.4-5 0L36.7 71.5l-5.4-7.2z" />
                 </svg>
             </div>
+            <a
+                style={{ display: "none" }}
+                ref={downloadClick}
+                href={pdfLink.current}
+                download="">
+                Download Button Hidden
+            </a>
             <div className='send-result'>
-                <div className='download'><BlackButton name={'Download'} icon={<FileDownloadIcon sx={{ color: 'white' }} />} /></div>
+                <div className='download' onClick={handleDownloadClick}>
+                    <BlackButton name={'Download'} icon={<FileDownloadIcon sx={{ color: 'white' }} />} />
+                </div>
                 <hr className='hr' />
                 <div className='email'>
                     <div style={{ height: "100%" }}>
@@ -52,10 +73,23 @@ function Result() {
                             onChange={handleChange}>
                         </TextField>
                     </div>
-                    <div onClick={handleButtonClick}><BlackButton name={'Send to Email'} icon={<SendIcon sx={{ color: 'white' }} />} /></div>
+                    <div onClick={handleSendClick}>
+                        <BlackButton name={'Send to Email'} icon={<SendIcon sx={{ color: 'white' }} />} />
+                    </div>
                 </div>
             </div>
-            <div className='result-inner'>result preview</div>
+            <div className='result-inner'><PDFviewer url={pdfLink.current} /></div>
+            {/* <embed
+                id="embed"
+                src={pdfLink.current}
+                type="application/pdf"
+                style={{ pointerEvents: "none", width: "700px", minHeight: "700px", marginTop: "50px", marginBottom: "100px" }}>
+
+            </embed> */}
+            {/* <iframe
+                className='result-inner'
+                src={pdfLink.current}>
+            </iframe> */}
         </div >
     );
 }
