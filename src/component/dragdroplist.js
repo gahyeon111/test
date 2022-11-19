@@ -75,7 +75,6 @@ class DragDropList extends Component {
                             <div style={{ marginBottom: "10px" }}>3. Each file should consist of at least 95% of English and must not exceed 5 MB in size.</div>
                         </div>
                         : <List dataFileCounter={this.props.dataFileCounter} dataTransferList={this.props.dataTransferList} setDataTransferList={this.props.setDataTransferList} />
-
                 }
             </div >
         )

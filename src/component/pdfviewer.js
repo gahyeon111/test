@@ -19,7 +19,7 @@ class FullWindow extends Component {
     }
 
     render() {
-        return <div id="pdf-div" style={{ minHeight: "100vh !important" }} />;
+        return <div id="pdf-div" style={{ minHeight: "100% !important" }} />;
     }
 }
 

@@ -149,18 +149,6 @@
   box-shadow: none;
 }
 
-/* .b-outer-uploadpdf {
-  height: 100%;
-  margin-left: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.b-outer-uploadpdf:active {
-  margin-left: 25px;
-  margin-right: -5px;
-  box-shadow: none;
-} */
-
 .b-uploadpdf {
   box-sizing: border-box;
   background-color: #FFFFFF;
@@ -248,6 +236,13 @@
 .b-inner-dragdrop-list-element-text {
   font-family: 'NotoSans-EBI';
   font-size: 14px;
+}
+
+.b-explain {
+  margin-top: 10px;
+  font-family: 'NotoSans-ELI';
+  font-size: 14px;
+  /* color: #2856A0; */
 }
 
 @font-face {

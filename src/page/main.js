@@ -17,14 +17,14 @@ function Main() {
   const dataFileCounter = useRef(0)
 
   console.log('main', dataFileCounter);
+  console.log(loading);
 
   return (
     <div>
       {loading ? <Loader /> : <div></div>}
       <div className='App-body'>
         {/* <div className='b-title'>Save your time</div> */}
-        <div className='b-subtitle'>Upload your PDF files, than we will create summarized PDF file for you!</div>
-        {/* <div className='b-subtitle'>All files uploaded to the server will be permanently deleted after download.</div> */}
+        <div className='b-subtitle'>Upload your PDF files, then we will create summarized PDF file for you!</div>
         <CreatePDF serialNumber={serialNumber} selectType={selectType} loading={loading} setLoading={setLoading} dataTransferList={dataTransferList} />
         <div className='b-outer-two-buttons'>
           <div className='b-selecttype'><SelectType selectType={selectType} /></div>
@@ -33,6 +33,7 @@ function Main() {
         <div className='b-dragdrop'>
           <DragDropList fileInputRef={fileInputRef} dataFileCounter={dataFileCounter} dataTransferList={dataTransferList} setDataTransferList={setDataTransferList} />
         </div>
+        <div className='b-explain'>* All files uploaded to the server will be permanently deleted after download.</div>
       </div>
     </div>
   );

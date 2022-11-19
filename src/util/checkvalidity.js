@@ -1,3 +1,5 @@
+// import Convert from './pdftotext';
+
 export function CheckValidity(file, filelist) {
     if (file.type != 'application/pdf') {
         // check file type
@@ -7,6 +9,7 @@ export function CheckValidity(file, filelist) {
         // check file size
         alert(`File: [${file.name}] is too big! (File size must not exceed 5 MB in size.)`);
         return false;
+        // } else if () {
     } else {
         var redundancy = 0;
         filelist.forEach(element => {
