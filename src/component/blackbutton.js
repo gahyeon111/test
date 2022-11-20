@@ -1,7 +1,7 @@
 function BlackButton(props) {
     return (
         <button className='b-createPDF'>
-            <div className='b-inner-createPDF'>{props.name}</div>
+            <div className='b-inner-createPDF'><i>{props.name}</i></div>
             {props.icon}
         </button>
     );

@@ -1,9 +1,9 @@
 import '../style/result.css';
-import BlackButton from '../util/blackbutton';
 import React, { useState, useRef } from 'react';
 import { TextField } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send'
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import BlackButton from '../component/blackbutton';
 import PDFviewer from '../component/pdfviewer';
 import Loader from './loader';
 

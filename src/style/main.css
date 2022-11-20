@@ -2,18 +2,12 @@
   background-color: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 60px;
-  /* display: flex; */
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 10;
-  /* font-size: calc(10px + 2vmin); */
-  /* color: white; */
   padding-left: 40px;
   padding-right: 40px;
-  /* margin-left: auto;
-  margin-right: auto; */
 }
 
 .h-body {
@@ -60,7 +54,6 @@
   min-height: calc(100vh - 60px);
   position: absolute;
   z-index: 1;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,23 +68,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* z-index: -1; */
 }
 
 .b-title {
-  /* font-family: 'PlayfairDisplay-EBI'; */
-  /* margin-top: 50px; */
-  font-family: 'NotoSans-EBI';
+  font-family: 'NotoSans-EB';
   font-size: 60px;
-  /* letter-spacing: 0.05em; */
   color: #2856A0;
   margin-bottom: 10px;
 }
 
 .b-subtitle {
-  /* font-family: 'PlayfairDisplay-EBI'; */
-  /* margin-top: 50px; */
-  font-family: 'NotoSans-EBI';
+  font-family: 'NotoSans-EB';
   font-size: 18px;
   text-align: center;
   color: #2856A0;
@@ -105,7 +92,6 @@
   border: 3px solid #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +108,7 @@
 }
 
 .b-inner-createPDF {
-  font-family: 'NotoSans-EBI';
+  font-family: 'NotoSans-EB';
   font-size: 14px;
   color: #FFFFFF;
   margin-right: 10px;
@@ -153,14 +139,12 @@
   box-sizing: border-box;
   background-color: #FFFFFF;
   width: 150px;
-  /* height: 100%; */
   font-family: 'NotoSans-EL';
   font-size: 16px;
   border-radius: 0px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-left: 20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,18 +171,14 @@
   width: 80vw;
   height: 50vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  /* overflow: auto; */
-  /* overflow: hidden */
 }
 
 .b-inner-dragdrop:hover {
   border: 3px solid #2856A0;
-  /* background-color: #F5F5F5; */
 }
 
 .b-inner-dragdrop-dragover {
   border: 3px solid #2856A0;
-  /* background-color: #F5F5F5; */
 }
 
 .b-inner-dragdrop-none {
@@ -207,8 +187,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  font-family: 'NotoSans-ELI';
+  font-family: 'NotoSans-EL';
   font-size: 14px;
 }
 
@@ -218,31 +197,25 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.35);
-
   font-family: 'NotoSans-EL';
   font-size: 14px;
 }
 
 .b-inner-dragdrop-list-element {
   padding-right: 10px;
-  /* width: 100%; */
   max-height: calc(50vh - 40px);
   overflow-y: scroll;
-
-  /* font-family: 'NotoSans-EBI';
-  font-size: 14px; */
 }
 
 .b-inner-dragdrop-list-element-text {
-  font-family: 'NotoSans-EBI';
+  font-family: 'NotoSans-EB';
   font-size: 14px;
 }
 
 .b-explain {
   margin-top: 10px;
-  font-family: 'NotoSans-ELI';
+  font-family: 'NotoSans-EL';
   font-size: 14px;
-  /* color: #2856A0; */
 }
 
 @font-face {
@@ -251,16 +224,6 @@
 }
 
 @font-face {
-  font-family: "NotoSans-ELI";
-  src: url("../asset/font/NotoSans-ExtraLightItalic.ttf");
-}
-
-@font-face {
   font-family: "NotoSans-EB";
   src: url("../asset/font/NotoSans-ExtraBold.ttf");
-}
-
-@font-face {
-  font-family: "NotoSans-EBI";
-  src: url("../asset/font/NotoSans-ExtraBoldItalic.ttf");
 }

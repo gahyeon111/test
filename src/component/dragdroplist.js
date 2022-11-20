@@ -69,10 +69,10 @@ class DragDropList extends Component {
                 {
                     (this.props.dataTransferList.length <= 0)
                         ? <div className='b-inner-dragdrop-none'>
-                            <div style={{ height: "100%", marginTop: "10px" }}>Drag one or more files to this drop zone.</div>
-                            <div>1. Up to 5 files are available</div>
-                            <div>2. Only PDF files are available</div>
-                            <div style={{ marginBottom: "10px" }}>3. Each file should consist of at least 95% of English and must not exceed 5 MB in size.</div>
+                            <div style={{ height: "100%", marginTop: "10px" }}><i>Drag one or more files to this drop zone.</i></div>
+                            <div><i>1. Up to 5 files are available</i></div>
+                            <div><i>2. Only PDF files are available</i></div>
+                            <div style={{ marginBottom: "10px" }}><i>3. Each file should consist of at least 95% of English and must not exceed 5 MB in size.</i></div>
                         </div>
                         : <List dataFileCounter={this.props.dataFileCounter} dataTransferList={this.props.dataTransferList} setDataTransferList={this.props.setDataTransferList} />
                 }

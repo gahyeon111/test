@@ -1,12 +1,11 @@
 import '../style/main.css';
 import { FaHourglass } from "react-icons/fa";
+import React, { useRef, useState } from 'react';
 import SelectType from '../component/selecttype';
 import UploadPDF from '../component/uploadpdf';
 import CreatePDF from '../component/createpdf.js'
 import DragDropList from '../component/dragdroplist';
 import Loader from './loader';
-
-import React, { useRef, useState } from 'react';
 
 function Main() {
   const fileInputRef = useRef(null)
@@ -23,8 +22,7 @@ function Main() {
     <div>
       {loading ? <Loader /> : <div></div>}
       <div className='App-body'>
-        {/* <div className='b-title'>Save your time</div> */}
-        <div className='b-subtitle'>Upload your PDF files, then we will create summarized PDF file for you!</div>
+        <div className='b-subtitle'><i>Upload your PDF files, then we will create summarized PDF file for you!</i></div>
         <CreatePDF serialNumber={serialNumber} selectType={selectType} loading={loading} setLoading={setLoading} dataTransferList={dataTransferList} />
         <div className='b-outer-two-buttons'>
           <div className='b-selecttype'><SelectType selectType={selectType} /></div>

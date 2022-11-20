@@ -1,6 +1,5 @@
 import React from 'react';
 import Select from 'react-select';
-// import { flavourOptions } from '../data';
 
 const options = [
     { value: 'null', label: 'Select Summary Type' },
@@ -27,17 +26,9 @@ function SelectType(props) {
                     borderRadius: 0,
                     colors: {
                         ...theme.colors,
-                        // primary25: '#2856A0',
                         primary: '#2856A0',
                     },
                 })}
-            // styles={{
-            //     control: (baseStyles, state) => ({
-            //         ...baseStyles,
-            //         // borderColor: state.isFocused ? 'grey' : 'grey',
-            //         // loadingMessage: 'Select Summary Type'
-            //     }),
-            // }}
             />
         </div>
     );

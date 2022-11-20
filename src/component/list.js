@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { List } from "@mui/material";
 import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
@@ -32,12 +31,6 @@ function FileList(props) {
         return size;
     }
 
-    const styles = (theme) => ({
-        listItemText: {
-            fontSize: '20em', //Insert your required size
-        }
-    });
-
     return (
         <div>
             <div
@@ -66,8 +59,8 @@ function FileList(props) {
                                         <ListItemAvatar>
                                             <MenuIcon />
                                         </ListItemAvatar>
-                                        <div className="b-inner-dragdrop-list-element-text" style={{ width: "100%" }}>{element.file.name}</div>
-                                        <div className="b-inner-dragdrop-list-element-text" style={{ marginRight: "20%", textAlign: "center" }}>{size(element)}</div>
+                                        <div className="b-inner-dragdrop-list-element-text" style={{ width: "100%" }}><i>{element.file.name}</i></div>
+                                        <div className="b-inner-dragdrop-list-element-text" style={{ marginRight: "20%", textAlign: "center" }}><i>{size(element)}</i></div>
                                     </ListItem>
                                     <Divider variant="inset" component="li" />
                                 </div>
