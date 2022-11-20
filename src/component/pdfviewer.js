@@ -12,6 +12,7 @@ class FullWindow extends Component {
             /* Invoke file preview */
             /* By default the embed mode will be Full Window */
             viewSDKClient.previewFile("pdf-div", {
+                showAnnotationTools: false,
                 showDownloadPDF: false,
                 showPrintPDF: false,
             }, this.props.url);
