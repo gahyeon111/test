@@ -95,19 +95,7 @@ function Result() {
                     downloaded
                         ? <div>The file downloaded successfully</div>
                         : <div className='result-inner'><PDFviewer url={pdfLink.current} /></div>
-                    // : <div className='result-inner'></div>
                 }
-                {/* <embed
-                id="embed"
-                src={pdfLink.current}
-                type="application/pdf"
-                style={{ pointerEvents: "none", width: "700px", minHeight: "700px", marginTop: "50px", marginBottom: "100px" }}>
-
-            </embed> */}
-                {/* <iframe
-                className='result-inner'
-                src={pdfLink.current}>
-            </iframe> */}
             </div >
         </div>
     );

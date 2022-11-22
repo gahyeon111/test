@@ -16,7 +16,6 @@ function Main() {
   const dataFileCounter = useRef(0)
 
   console.log('main', dataFileCounter);
-  console.log(loading);
 
   return (
     <div>
