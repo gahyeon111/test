@@ -93,7 +93,10 @@ function Result() {
                 <div className='b-explain'>* All files uploaded to the server will be permanently deleted after download.</div>
                 {
                     downloaded
-                        ? <div>The file downloaded successfully</div>
+                        ? <div>
+                            <div className='b-explain'>The file downloaded successfully!</div>
+                            <div className='b-explain'>(Summarized file also deleted in the server.)</div>
+                        </div>
                         : <div className='result-inner'><PDFviewer url={pdfLink.current} /></div>
                 }
             </div >

@@ -39,7 +39,7 @@ function FileList(props) {
         copyListItems.splice(draggingOverItemIndex.current, 0, dragItemContent);
         draggingItemIndex.current = draggingOverItemIndex.current;
         props.setDataTransferList(() => copyListItems);
-    }; //6
+    };
 
     const dragOverHandler = (e, i) => {
         e.preventDefault();
