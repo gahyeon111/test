@@ -9,7 +9,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
 function FileList(props) {
-    // const [draggable, setDraggable] = useState(false);
     const draggingItemIndex = useRef(null);
     const draggingOverItemIndex = useRef(null);
 

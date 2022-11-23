@@ -16,26 +16,27 @@ class CreatePDF extends Component {
                 alert('Choose the Select Summary Type')
             } else {
                 this.props.serialNumber.current = Math.floor(100000000 + Math.random() * 900000000)
-                this.props.setLoading(load => (load || true));
+                this.props.setLoading(() => (1));
 
                 const dataTransfer = new DataTransfer()
                 this.props.dataTransferList.forEach(item => {
                     dataTransfer.items.add((item.file))
                 })
+                console.log(dataTransfer)
                 // Axios.postForm('http://localhost:3000/', {
+                // Axios.post('http://localhost:3000/', {
                 //     'filecount': dataTransfer.files.length,
                 //     'files[]': dataTransfer.files,
                 //     'id': this.props.serialNumber.current,
                 //     'selecttype': this.props.selectType.current
                 // }).then(
                 //     (response) => {
-                //         this.props.setLoading(load => (load && false));
-                //         const history = useHistory();
-                //         history.push('/result');
+                //         this.props.response.current = response;
+                //         this.props.setLoading(() => (2));
                 //     }
                 // ).catch(
                 //     () => {
-                //         this.props.setLoading(load => (load && false));
+                //         this.props.setLoading(load => 2);
                 //     }
                 // )
             }
