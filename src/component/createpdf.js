@@ -49,7 +49,7 @@ class CreatePDF extends Component {
             <div
                 style={{ marginTop: "40px", marginBottom: "40px" }}
                 onClick={this.handleButtonClick}>
-                <BlackButton name={'Create PDF'} icon={<SendIcon sx={{ color: 'white' }} />} />
+                <BlackButton name={'Summarize'} icon={<SendIcon sx={{ color: 'white' }} />} />
             </div >
         );
     }
