@@ -31,6 +31,7 @@ class CreatePDF extends Component {
                 //     'selecttype': this.props.selectType.current
                 // }).then(
                 //     (response) => {
+                //         console.log(response)
                 //         this.props.response.current = response;
                 //         this.props.setLoading(() => (2));
                 //     }

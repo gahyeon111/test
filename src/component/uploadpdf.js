@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import { CheckValidity } from '../util/checkvalidity.js';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function UploadPDF(props) {
     const handleButtonClick = (e) => {
@@ -23,10 +24,12 @@ function UploadPDF(props) {
         e.target.value = '';
     };
 
+    const matches = useMediaQuery('(max-width: 320px)');
+
     return (
         <React.Fragment>
             <button className='b-uploadpdf' onClick={handleButtonClick}>
-                Upload PDF <FileUploadIcon sx={{ color: '#2856A0' }} />
+                {matches ? '' : 'Upload PDF'} <FileUploadIcon sx={{ color: '#2856A0' }} />
             </button>
             <input
                 ref={props.fileInputRef}

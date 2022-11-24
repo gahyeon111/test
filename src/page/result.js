@@ -21,7 +21,7 @@ function Result() {
             alert('The file is already downloaded');
         } else {
             downloadClick.current.click();
-            // 다운로드 했으면 서버에 알려서 파일 지워야 함
+            // TODO: tell server that downloading succes
             setDownloaded((prev) => (prev || true));
         }
     }

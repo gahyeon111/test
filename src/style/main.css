@@ -27,7 +27,7 @@
 }
 
 .h-headline {
-  min-width: 200px;
+  /* min-width: 200px; */
   width: 100%;
   font-family: 'NotoSans-EB';
   font-size: 20px;
@@ -56,7 +56,8 @@
 .App-body {
   position: relative;
   background-color: #F5F5F5;
-  min-height: calc(100vh - 60px);
+  min-height: calc(796px - 60px);
+  max-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,6 +172,7 @@
   width: 80vw;
   height: 50vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow-x: scroll;
 }
 
 .b-inner-dragdrop:hover {
@@ -192,6 +194,10 @@
   justify-content: center;
   font-family: 'NotoSans-EL';
   font-size: 14px;
+}
+
+.b-inner-dragdrop-list {
+  min-width: 400px;
 }
 
 .b-inner-dragdrop-list-header {
@@ -231,4 +237,53 @@
 @font-face {
   font-family: "NotoSans-EB";
   src: url("../asset/font/NotoSans-ExtraBold.ttf");
+}
+
+@media (max-width: 430px) {
+  .b-subtitle {
+    font-size: 14px;
+  }
+
+  .App-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .b-selecttype {
+    font-size: 14px;
+  }
+
+  .b-uploadpdf {
+    font-size: 14px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 320px) {
+  .b-subtitle {
+    font-size: 12px;
+  }
+
+  .h-headline {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .h-aboutus {
+    min-width: max-content;
+    font-family: 'NotoSans-EL';
+    font-size: 14px;
+  }
+
+  .b-selecttype {
+    font-size: 12px;
+  }
+
+  .b-uploadpdf {
+    width: 50px;
+  }
+
+  .b-explain {
+    font-size: 12px;
+  }
 }

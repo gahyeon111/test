@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import { List } from "@mui/material";
 import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -56,6 +54,7 @@ function FileList(props) {
 
     return (
         <div
+            className="b-inner-dragdrop-list"
             onClick={handleButtonClickElement}>
             <div
                 className="b-inner-dragdrop-list-header">
